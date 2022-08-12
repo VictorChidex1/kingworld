@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      --primary-color-cyan: hsl(158, 36%, 37%);
+      --primary-color-cyan-hover: hsl(158, 36%, 45%);
+      --primary-color-cream: hsl(30, 38%, 92%);
+      --neutral-color-very-dark-blue: hsl(212, 21%, 14%);
+      --neutral-color-dark-grayish-blue: hsl(228, 12%, 48%);
+      --neutral-color-white: hsl(0, 0%, 100%);
+      --normal-font: font-family: 'Fraunces', serif;
+      --special-font: font-family: 'Montserrat', sans-serif;
+    }
+
+    body, html {
+      font-size: 14px;
+      font-family: var(--normal-font);
+      background-color: var(--primary-color-cream);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p, h1 {
+      margin: 0;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 10px;
+      background-color: white;
+      max-width: 650px;
+      height: 492px;
+      overflow: hidden;
+    }
+
+    .card-grid-item:nth-child(2) {
+      padding: 24px 32px;
+    }
+
+    .card-grid-item > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overline {
+      font-family: 'Montserrat';
+      text-transform: uppercase;
+      color: rgb(145, 145, 145);
+      font-size: 12px;
+      letter-spacing: 6px;
+      margin: 0;
+    }
+
+    .description {
+      font-family: 'Montserrat';
+      color: rgb(145, 145, 145);
+      line-height: 24px;
+    }
+
+    .header {
+      font-family: 'Fraunces', serif;
+    }
+
+    .price {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .price .current {
+      color: var(--primary-color-cyan);
+      font-size: 2rem;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+    }
+    
+    .price .previous {
+      color: rgb(145, 145, 145);
+      font-family: 'Montserrat';
+      text-decoration: line-through;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      background-color: var(--primary-color-cyan);
+      color: white;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+      padding: 12px;
+    }
+
+    button:hover {
+      background-color: var(--primary-color-cyan-hover);
+    }
+
+    button img {
+      height: 16px;
+    }
+
+    @media only screen and (max-width: 500px) {
+      body, html {
+        /* background-color: red; */
+        display: block;
+      }
+      .card-grid {
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+        width: auto;
+        height: auto;
+      }
+      .card-grid-item > img {
+        height: 240px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card-grid">
+    <div class="card-grid-item">
+      <img src="./images/image-product-desktop.jpg"/>      
+    </div>
+
+    <div class="card-grid-item">
+      <div class="details">
+        <p class="overline">perfume</p>
+        <h1 class="header">Gabrielle Essence Eau De Parfum</h1>
+        <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="price">
+          <p class="current">$149.99</p>
+          <p class="previous">$169.99</p>
+        </div>
+        <button>
+          <img src="./images/icon-cart.svg"/>
+          <p>Add to Cart</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
